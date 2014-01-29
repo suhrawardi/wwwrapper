@@ -5,7 +5,7 @@ defmodule Wwwrapper.Mixfile do
     [ app: :wwwrapper,
       version: "0.0.1",
       elixir: "~> 0.12.2",
-      escript_main_module: Crawler,
+      escript_main_module: Wwwrapper,
       elixirc_paths: ["lib"],
       deps: deps ]
   end
@@ -23,7 +23,7 @@ defmodule Wwwrapper.Mixfile do
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
-      { :wwweaver, git: "../wwweaver" }
+      { :wwweaver, path: "../wwweaver/" }
     ]
   end
 end

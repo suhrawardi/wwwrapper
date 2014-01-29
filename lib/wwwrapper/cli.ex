@@ -24,8 +24,6 @@ defmodule Wwwrapper.CLI do
   end
 
   def process({:download, url}) do
-    Amnesia.start
-    Wwweaver.Process.crawl(url, &Wwwrapper.Downloader.save(&1, &2))
-    Amnesia.stop
+    Wwweaver.Process.start(url, &Wwwrapper.Downloader.save(&1, &2))
   end
 end

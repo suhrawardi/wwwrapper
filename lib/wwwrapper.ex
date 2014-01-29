@@ -8,8 +8,6 @@ defmodule Wwwrapper do
   #end
 
   def main(argv) do
-    Wwwrapper.Database.Destroy.run
-    Wwwrapper.Database.Create.run
     Wwwrapper.CLI.run(argv)
   end
 end
