@@ -22,8 +22,14 @@ defmodule Wwwrapper.Mixfile do
   # To specify particular versions, regardless of the tag, do:
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
-    [
-      { :wwweaver, path: "../wwweaver/" }
-    ]
+    if File.exists?("../wwweaver/") do
+      [
+        { :wwweaver, path: "../wwweaver/" }
+      ]
+    else
+      [
+        { :wwweaver, github: "suhrawardi/wwweaver" }
+      ]
+    end
   end
 end
